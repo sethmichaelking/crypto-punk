@@ -2,18 +2,18 @@ import React from 'react'
 import weth from '../assets/weth.png'
 import './CollectionCard.css'
 
-const CollectionCard = ({id, name, traits, image}) => {
+const CollectionCard = ({ punk }) => {
   return (
    <div className='collectionCard'> 
-        <img src={image} alt=''/>
+        <img src={punk.image_original_url} alt=''/>
         <div className='detail'>
         <div className='name'>
-            {name} <div className='id'> •#{id}  </div>
+            {punk.name} <div className='id'> •#{punk.token_id}  </div>
         </div>
 
          <div className='priceContainer'>
-                <img src={weth} className='wethImage' />
-                <div className='price'>{traits} </div>
+                <img src={weth} className='wethImage' alt='nick'/>
+                <div className='price'> {punk.traits[0].price} </div>
          </div>
      </div>
    </div>
