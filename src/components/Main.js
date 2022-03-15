@@ -8,7 +8,7 @@ const Main = () => {
             <div className='punkHighlight'>
                 <div className='punkContainer'>
                     <img 
-                    src={activePunk.image_original_url} 
+                    // src={activePunk.image_original_url} 
                     alt='' 
                     className='selectedPunk'> </img>
                 </div>
