@@ -24,14 +24,9 @@ function App() {
   return (
   <div className='app' >
     <Header />
+    <Main />
     <PunkList punkListData={punkListData} />
     {/* <Main /> */}
-    {/* <CollectionCard 
-      id={0} 
-      name={'Zero HP Lovecraft'} 
-      traits={[7]} 
-      image='https://lh3.googleusercontent.com/Z55uIhQfc3Daf--lk4XpWyF7TqxQtE7WjA0Z-At96jLRQWjB09KxMO_bv-bhgVPLha4N3LX0cnzZT8nyk5UbCFJGJ3yzPDGVeT3eHrU=w600'
-      /> */}
   </div>
   )
 }
