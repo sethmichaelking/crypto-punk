@@ -1,10 +1,12 @@
 .main {
     max-height: 50vh;
+    overflow: hidden;
 }
 .mainContent {
     display: flex;
-    padding-bottom: 20px;
-    border-bottom: 1px solid white
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+  
 }
 
 .punkHighlight {
@@ -18,12 +20,12 @@
     border-radius: 20px;
     overflow: hidden;
     display: flex;
-    margin: 20px;
+    margin-right: 20px;
 }
 
 .selectedPunk {
     object-fit: contain;
-    max-width: min(60vw, 50vh);
+    max-width: min(70vw, 80vh);
     max-height: 20vw;
 }
 
@@ -42,7 +44,7 @@
 .itemNumber {
     color: aliceblue;
     font-size: 72px;
-    align-self: center;
+    align-self:flex-start
 }
 
 .owner {
@@ -58,10 +60,10 @@
 .ownerImagecontainer {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-    object-fit: contain;
+    border-radius: 100%;
+    border-radius: 100%;
+    overflow:hidden;
+    object-fit: fill;
 }
 
 .ownerDetails {
@@ -77,6 +79,7 @@
 
 .ownerHandle {
     color: white;
+    flex-direction: row;
 }
 .ownerLink {
     padding: 12px;
@@ -90,4 +93,15 @@
 .ownerLink > img {
     height: 100%;
     width: 100%;
+}
+
+.ownerLinkImage {
+    display: flex;
+    height: 55%;
+    width: 55%;
+    flex-direction: row;
+}
+
+.imageProPic {
+    object-fit: contain;
 }

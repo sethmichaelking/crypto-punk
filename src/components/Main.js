@@ -24,28 +24,31 @@ const Main = () => {
             </div>
            <div className='owner'>
                 <div className='ownerImagecontainer'>
-                    <img src='https://lh3.googleusercontent.com/kdJ9IQOACVGusCeV9T11lBIckFHkvPkmYwEkC5T5cx6RAzwA4YplqS5ZLqLDKDWf_SyTchS0vHo-1sibRlFVcuT7n4_UQMQffelv=w600' alt='' />
+                    {/* for line 28, the profile picture image, its displaying the top left corner of the image shown Tao Lin x Countere Mag, but the pic isn't being displayed properly */}
+                    <img src='https://lh3.googleusercontent.com/kdJ9IQOACVGusCeV9T11lBIckFHkvPkmYwEkC5T5cx6RAzwA4YplqS5ZLqLDKDWf_SyTchS0vHo-1sibRlFVcuT7n4_UQMQffelv=w600' alt=''/>
                 </div>
              <div className='ownerDetails'>
+                 {/* not sure why this isn't working so I just weant ahead and commented it out and now the dev enviorment looks good
+                 
                  <div className='ownerNameAndHandle'>
                     <div className='ownerLink'>
-                        <div> 0xCb7a625840500505DE25267948942027F9448322 </div>
+                        <div> 0xCb7a625840500505DE25267948942027F9448322 </div> */}
                             <div className='ownerHandle'> </div>
-                            <div className='ownerLinkImage'> 
-                                <img src={twitter} alt='' />
-                            </div>
-                            <div className='ownerLinkImage'> 
-                                <img src={instagram} alt=''/>
-                            </div>
-                            <div className='ownerLinkImage'> 
-                                <img src={facebook} alt=''/>
-                            </div>
+                                <div className='ownerLinkImage'> 
+                                    <img src={twitter} alt='' />
+                                </div>
+                                <div className='ownerLinkImage'> 
+                                    <img src={instagram} alt=''/>
+                                </div>
+                                <div className='ownerLinkImage'> 
+                                    <img src={facebook} alt=''/>
+                                </div>
                     </div>
                  </div>
              </div>
            </div> 
-        </div>
-    </div>
+    //     </div>
+    // </div>
   )
 }
 
