@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PunkList from './PunkList'
 import twitter from '../assets/twitter.png'
 import instagram from '../assets/instagram.png'
@@ -6,7 +6,13 @@ import facebook from '../assets/fb7.png'
 import './Main.css'
 
 
-const Main = () => {
+const Main = ({ selectedPunk, punkListData }) => {
+    const [activePunk, setActivePunk] = useState(punkListData[0])
+
+    useEffect(() => {
+        setActivePunk(punkListData[selectedPunk])
+    }, [punkListData, selectedPunk])
+
   return (
     <div className='main'>
         <div className='mainContent'>
@@ -14,13 +20,15 @@ const Main = () => {
                 <div className='punkContainer'>
                     <img 
                     className='selectedPunk'
-                    src='https://lh3.googleusercontent.com/kdJ9IQOACVGusCeV9T11lBIckFHkvPkmYwEkC5T5cx6RAzwA4YplqS5ZLqLDKDWf_SyTchS0vHo-1sibRlFVcuT7n4_UQMQffelv=w600' alt='' className='selectedPunk'/> 
+                    src={activePunk.image_url} 
+                    alt=''
+                    className='selectedPunk'/> 
                 </div>
             </div>
 
             <div className='punkDetail'>
-                <div className='title'> Bandana Punk </div>
-                    <span className='itemNumber'> *#3</span>
+                <div className='title'> {activePunk.name} </div>
+                    <span className='itemNumber'> *{activePunk.token_id}</span>
             </div>
            <div className='owner'>
                 <div className='ownerImagecontainer'>
